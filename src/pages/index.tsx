@@ -31,9 +31,15 @@ export default function Home({ content }: IndexProps) {
       <Link className="max-w-xl w-full mx-auto" href="/content/1">
         <Content {...content} />
       </Link>
-      <Content {...content} />
-      <Content {...content} />
-      <Content {...content} />
+      <Link className="max-w-xl w-full mx-auto" href="/content/2">
+        <Content {...content} />
+      </Link>
+      <Link className="max-w-xl w-full mx-auto" href="/content/3">
+        <Content {...content} />
+      </Link>
+      <Link className="max-w-xl w-full mx-auto" href="/content/4">
+        <Content {...content} />
+      </Link>
     </div>
   );
 }
