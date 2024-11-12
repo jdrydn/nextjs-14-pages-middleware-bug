@@ -57,20 +57,20 @@ Pages Router + Middleware + Base path
 
 ### Additional context
 
-- The error is specifically because the page's `props` is empty on client-side render.
-- The `/index.json` file instead returns 308 Redirect to `/`.
-- The middleware adds `X-Request-ID`, but this is not present on the initial `IndexPage` SSR.
-- Removing `src/middleware.ts` resumes normal behaviour - the Back link works perfectly fine.
-- Removing `headers` and/or `redirects` from `next.config.mjs` has no effect.
+- The error is specifically because the page's `props` is empty on client-side render
+- `getServerSideProps` runs - instead the `/index.json` endpoint returns 308 Redirect to `/`
+- The middleware adds `X-Request-ID`, but this is not present on the initial `IndexPage` SSR
+- Removing `src/middleware.ts` resumes normal behaviour - the Back link works perfectly fine
+- Removing `headers` and/or `redirects` from `next.config.mjs` has no effect
 
 Workarounds:
 
 - Moving the `IndexPage` to a nested folder, e.g. `timeline/index.tsx` resolves this issue but changes the URL to
-  `/my-app/timeline`, which is not desired.
+  `/my-app/timeline`, which is not desired
 - Removing the `basePath` from `next.config.mjs` also resolves this behaviour - but setting a base path is a requirement
-  for my project.
+  for my project
 
 Assumptions:
 
-- The rest of the NextJS project is configured correctly.
-- This only affects the **pages** router.
+- The rest of the NextJS project is configured correctly
+- This only affects the **pages** router
