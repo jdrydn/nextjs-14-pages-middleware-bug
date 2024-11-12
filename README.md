@@ -70,7 +70,7 @@ Workarounds:
 - Removing the `basePath` from `next.config.mjs` also resolves this behaviour - but setting a base path is a requirement
   for my project.
 
-### Assumptions
+Assumptions:
 
 - The rest of the NextJS project is configured correctly.
 - This only affects the **pages** router.
