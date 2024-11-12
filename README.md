@@ -3,6 +3,8 @@
 **Summary:** Adding a middleware file to the NextJS project causes the index route `src/pages/index.ts` to error when
 navigating client-side.
 
+https://github.com/user-attachments/assets/fe2b6017-f91a-412a-b17b-f434222e3535
+
 Assumptions:
 
 - The rest of the NextJS project is configured correctly.
