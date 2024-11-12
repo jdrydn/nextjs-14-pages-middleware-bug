@@ -57,12 +57,6 @@ Pages Router + Middleware + Base path
 
 ### Additional context
 
-The error is specifically because the page's props is empty on client-side render.
-The /index.json file instead returns 308 Redirect to /.
-The middleware adds X-Request-ID, but this is not present on the initial IndexPage SSR.
-Removing src/middleware.ts resumes normal behaviour - the Back link works perfectly fine.
-Removing headers and/or redirects from next.config.mjs has no effect.
-
 - The error is specifically because the page's `props` is empty on client-side render.
 - The `/index.json` file instead returns 308 Redirect to `/`.
 - The middleware adds `X-Request-ID`, but this is not present on the initial `IndexPage` SSR.
